@@ -5,6 +5,7 @@ import java.util.concurrent.*;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+@ThreadSafe
 public class CachedResourcePool<T> implements ResourcePool<T> {
     private final ScheduledExecutorService cleaner = Executors.newSingleThreadScheduledExecutor();
     private final long keepAliveTime;
